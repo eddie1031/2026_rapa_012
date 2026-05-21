@@ -53,22 +53,22 @@ public class SecurityConfiguration {
                 .build();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-
-        manager.createUser(User
-                .withUsername("happy")
-                .password(
-                        passwordEncoder.encode("day")
-                )
-                .build()
-        );
-
-        return manager;
-
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService() {
+//
+//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+//
+//        manager.createUser(User
+//                .withUsername("happy")
+//                .password(
+//                        passwordEncoder.encode("day")
+//                )
+//                .build()
+//        );
+//
+//        return manager;
+//
+//    }
 
 
 }
