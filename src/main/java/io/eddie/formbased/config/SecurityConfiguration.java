@@ -40,6 +40,9 @@ public class SecurityConfiguration {
 //                )
                 .authorizeHttpRequests(
                         auth -> auth.requestMatchers("/login-page")
+                                    .anonymous()
+                                .requestMatchers("/sign-up")
+                                    .permitAll()
 //                                .anonymous()
 //                                .permitAll()
 //                                .hasAnyRole()

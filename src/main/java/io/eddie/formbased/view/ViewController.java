@@ -11,5 +11,9 @@ public class ViewController {
         return "sign_in";
     }
 
+    @GetMapping("/sign-up")
+    public String showSignUpPage() {
+        return "sign_up";
+    }
 
 }
