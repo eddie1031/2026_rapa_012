@@ -2,6 +2,7 @@ package io.eddie.formbased.service;
 
 import io.eddie.formbased.dao.MemberRepository;
 import io.eddie.formbased.domain.Member;
+import io.eddie.formbased.dto.MemberDetails;
 import io.eddie.formbased.dto.SignUpRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -42,7 +43,11 @@ public class MemberService implements UserDetailsService {
                 () -> new UsernameNotFoundException("해당 회원을 찾을 수 없습니다.")
         );
 
-        return member;
+        return new MemberDetails(
+                member.getUsername(),
+                member.getPassword(),
+                member.getRole()
+        );
 
     }
 

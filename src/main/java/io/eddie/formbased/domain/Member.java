@@ -22,7 +22,7 @@ public class Member {
 
     private String email;
 
-    private String role = "USER";
+    private String role = "MANAGER";
 
     @Setter
     private LocalDateTime lastSignInAt;
